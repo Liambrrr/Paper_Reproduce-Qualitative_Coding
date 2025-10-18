@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import argparse
 import json
 import os
@@ -337,47 +336,121 @@ def main():
 
     preds = np.array(preds, dtype=np.int32)
 
-    # 9) Evaluate Cohen's kappa where human labels are present
+    # 9) Attach predictions to the merged frame and save a full copy
+    merged["gpt_pred"] = preds
+    merged_path = f"{args.out_prefix}_merged_with_preds.csv"
+    merged.to_csv(merged_path, index=False)
+
+    # 10) Evaluate metrics
+
+    # Overall (same as before)
     valid_mask = ~pd.isna(merged["human_label"])
     if valid_mask.sum() == 0:
         print("No human labels found for evaluation after merge (check ID/construct alignment).", file=sys.stderr)
-        kappa = None
+        overall_kappa = None
     else:
-        y_true = merged.loc[valid_mask, "human_label"].astype(int).values
-        y_pred = preds[valid_mask.values]
-        kappa = float(cohen_kappa_score(y_true, y_pred))
+        y_true_all = merged.loc[valid_mask, "human_label"].astype(int).values
+        y_pred_all = merged.loc[valid_mask, "gpt_pred"].astype(int).values
+        overall_kappa = float(cohen_kappa_score(y_true_all, y_pred_all))
 
-    # 10) Save artifacts
+    # ---- Per-construct table ----
+    # For each construct, compute:
+    # - frequency in data: proportion of human_label == 1 among evaluated rows
+    # - Hum–GPT κ
+    # - Hum–GPT precision
+    # - Hum–GPT recall
+    rows = []
+    for construct, g in merged.groupby(args.construct_col):
+        mask = ~pd.isna(g["human_label"])
+        n_eval = int(mask.sum())
+        if n_eval == 0:
+            rows.append({
+                "construct": construct,
+                "freq_in_data": None,
+                "hum_gpt_kappa": None,
+                "hum_gpt_precision": None,
+                "hum_gpt_recall": None,
+                "n_eval": 0
+            })
+            continue
+
+        y_true = g.loc[mask, "human_label"].astype(int).values
+        y_pred = g.loc[mask, "gpt_pred"].astype(int).values
+
+        # frequency = share of human positives (how often the construct occurs)
+        freq = float((y_true == 1).mean())
+
+        # κ can be undefined in degenerate cases; guard it
+        try:
+            kappa_c = float(cohen_kappa_score(y_true, y_pred))
+        except Exception:
+            kappa_c = None
+
+        # precision / recall (binary, 1 is positive)
+        prec = float(precision_score(y_true, y_pred, zero_division=0))
+        rec  = float(recall_score(y_true, y_pred, zero_division=0))
+
+        rows.append({
+            "construct": construct,
+            "freq_in_data": freq,
+            "hum_gpt_kappa": kappa_c,
+            "hum_gpt_precision": prec,
+            "hum_gpt_recall": rec,
+            "n_eval": n_eval
+        })
+
+    per_construct_df = pd.DataFrame(rows).sort_values("construct").reset_index(drop=True)
+
+    # 11) Save artifacts
     npy_path = f"{args.out_prefix}_preds.npy"
     csv_path = f"{args.out_prefix}_preds.csv"
     metrics_path = f"{args.out_prefix}_metrics.json"
+    per_construct_csv = f"{args.out_prefix}_per_construct_metrics.csv"
+    per_construct_json = f"{args.out_prefix}_per_construct_metrics.json"
 
+    # raw predictions (unchanged)
     np.save(npy_path, preds)
     pd.DataFrame({
         "row_index": np.arange(len(preds)),
         "pred": preds
     }).to_csv(csv_path, index=False)
 
+    # per-construct table
+    per_construct_df.to_csv(per_construct_csv, index=False)
+    with open(per_construct_json, "w") as f:
+        json.dump(per_construct_df.to_dict(orient="records"), f, indent=2)
+
+    # overall metrics JSON (kept; now also includes paths to new files)
     metrics = {
         "model": model_name,
-        "kappa": kappa,
+        "overall_kappa": overall_kappa,
         "n_rows": int(len(merged)),
-        "n_eval": int(valid_mask.sum()),
+        "n_eval_overall": int(valid_mask.sum()),
         "merge_keys": merge_keys,
         "columns": {
             "text_col": args.text_col,
             "construct_col": args.construct_col,
             "id_col": args.id_col,
+        },
+        "artifacts": {
+            "merged_with_preds_csv": merged_path,
+            "preds_npy": npy_path,
+            "preds_csv": csv_path,
+            "per_construct_csv": per_construct_csv,
+            "per_construct_json": per_construct_json
         }
     }
     with open(metrics_path, "w") as f:
         json.dump(metrics, f, indent=2)
 
+    # 12) Console summary
     print(f"Saved predictions to {npy_path} and {csv_path}")
-    if kappa is not None:
-        print(f"Cohen's kappa (zero-shot, hum-model): {kappa:.4f} on {valid_mask.sum()} examples")
+    print(f"Saved merged data with predictions to {merged_path}")
+    print(f"Saved per-construct metrics to {per_construct_csv} and {per_construct_json}")
+    if overall_kappa is not None:
+        print(f"Cohen's kappa (overall, hum–model): {overall_kappa:.4f} on {valid_mask.sum()} examples")
     else:
-        print("Kappa not computed (no human labels matched).")
+        print("Overall kappa not computed (no human labels matched).")
 
 
 if __name__ == "__main__":
