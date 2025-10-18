@@ -1,0 +1,15 @@
+{
+  "model": "gpt-4o",
+  "kappa": 0.3727266211764356,
+  "n_rows": 1414,
+  "n_eval": 1414,
+  "merge_keys": [
+    "_id_key",
+    "_construct_canon"
+  ],
+  "columns": {
+    "text_col": "code_change_text",
+    "construct_col": "construct_name",
+    "id_col": "task_submit_id"
+  }
+}

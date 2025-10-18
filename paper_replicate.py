@@ -9,7 +9,7 @@ import difflib
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import cohen_kappa_score
+from sklearn.metrics import cohen_kappa_score, precision_score, recall_score
 
 try:
     from openai import OpenAI
@@ -342,7 +342,6 @@ def main():
     merged.to_csv(merged_path, index=False)
 
     # 10) Evaluate metrics
-
     # Overall (same as before)
     valid_mask = ~pd.isna(merged["human_label"])
     if valid_mask.sum() == 0:
@@ -380,7 +379,7 @@ def main():
         # frequency = share of human positives (how often the construct occurs)
         freq = float((y_true == 1).mean())
 
-        # κ can be undefined in degenerate cases; guard it
+        # kappa can be undefined in degenerate cases; guard it
         try:
             kappa_c = float(cohen_kappa_score(y_true, y_pred))
         except Exception:
