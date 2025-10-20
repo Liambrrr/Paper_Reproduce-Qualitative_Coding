@@ -118,13 +118,11 @@ def coerce_raw_columns(df: pd.DataFrame, id_col: str | None, text_col: str, cons
     """
     cols = list(df.columns)
 
-    # If exactly 2 columns and id provided -> assume [id, text]
     if len(cols) == 2 and (id_col is not None) and (text_col not in cols):
         df = df.copy()
         df.columns = [id_col, text_col]
         return df
 
-    # Ensure TEXT present
     if text_col not in df.columns:
         obj_cols = [c for c in cols if df[c].dtype == "object"]
         if obj_cols:
@@ -138,13 +136,11 @@ def coerce_raw_columns(df: pd.DataFrame, id_col: str | None, text_col: str, cons
         else:
             df = df.rename(columns={cols[-1]: text_col})
 
-    # If construct column is missing but a close name exists, adopt it
     if construct_col not in df.columns:
         match = difflib.get_close_matches(construct_col, cols, n=1, cutoff=0.8)
         if match:
             df = df.rename(columns={match[0]: construct_col})
 
-    # Ensure ID if requested
     if id_col and (id_col not in df.columns):
         num_cols = [c for c in cols if np.issubdtype(df[c].dtype, np.number)]
         if num_cols:
@@ -161,15 +157,13 @@ def melt_coded_wide_to_long(coded_df: pd.DataFrame, id_col: str | None, construc
     """
     df = coded_df.copy()
 
-    # Choose id column(s) to carry through
     if id_col and id_col in df.columns:
         id_vars = [id_col]
     elif "task_submit_id" in df.columns:
         id_vars = ["task_submit_id"]
     else:
-        id_vars = [df.columns[0]]  # fallback best-effort
+        id_vars = [df.columns[0]]
 
-    # All other columns are likely constructs
     value_vars = [c for c in df.columns if c not in id_vars]
 
     long_df = df.melt(
@@ -183,7 +177,6 @@ def melt_coded_wide_to_long(coded_df: pd.DataFrame, id_col: str | None, construc
         warnings.simplefilter("ignore")
         long_df["human_label"] = pd.to_numeric(long_df["human_label"], errors="coerce")
 
-    # Canonical construct for merge
     long_df["_construct_canon"] = long_df[construct_col_name].astype(str).map(canonical)
     return long_df
 
@@ -250,12 +243,12 @@ def main():
     raw_df = pd.read_excel(args.raw_path, sheet_name=args.sheet_name, header=0)
     coded_df = pd.read_csv(args.coded_path)
 
-    # 2) Make RAW robust
+    # Make RAW robust
     raw_df = coerce_raw_columns(raw_df, args.id_col, args.text_col, args.construct_col)
     if args.text_col not in raw_df.columns:
         raise KeyError(f"Could not find a text column '{args.text_col}' in RAW after coercion. Got: {list(raw_df.columns)}")
 
-    # 3) If RAW lacks construct names, expand by constructs found in CODED
+    # If RAW lacks construct names, expand by constructs found in CODED
     if args.construct_col not in raw_df.columns:
         if not args.id_col or args.id_col not in raw_df.columns:
             raise KeyError(
@@ -266,10 +259,9 @@ def main():
         constructs_from_coded = get_construct_list_from_coded(coded_df, args.id_col)
         raw_df = expand_raw_by_constructs(raw_df, constructs_from_coded, args.id_col, args.text_col, args.construct_col)
 
-    # Canonical construct for merge
     raw_df["_construct_canon"] = raw_df[args.construct_col].map(canonical)
 
-    # 4) Prepare CODED labels (wide -> long is the normal case)
+    # Prepare CODED labels (wide -> long is the normal case)
     if args.label_col and args.label_col in coded_df.columns:
         coded_long = coded_df.copy()
         if "human_label" not in coded_long.columns:
@@ -281,7 +273,7 @@ def main():
     else:
         coded_long = melt_coded_wide_to_long(coded_df, args.id_col, args.construct_col)
 
-    # 5) Build canonical ID keys (normalize float/int/string)
+    # Build canonical ID keys (normalize float/int/string)
     has_raw_id = args.id_col and (args.id_col in raw_df.columns)
     has_coded_id = args.id_col and (args.id_col in coded_long.columns)
     if has_raw_id:
@@ -289,7 +281,7 @@ def main():
     if has_coded_id:
         coded_long["_id_key"] = make_id_key(coded_long[args.id_col])
 
-    # 6) Merge preference: (ID + construct), else construct-only
+    # Merge preference: (ID + construct), else construct-only
     if has_raw_id and has_coded_id:
         merge_keys = ["_id_key", "_construct_canon"]
     else:
@@ -309,12 +301,12 @@ def main():
         how="left",
     )
 
-    # 7) Load OpenAI model
+    # Load OpenAI model
     codebook = build_codebook()
     print(f"Loading OpenAI model: {args.model}", file=sys.stderr)
     client, model_name = load_client(args.model)
 
-    # 8) Iterate and predict
+    # Iterate and predict
     preds = []
     for _, row in merged.iterrows():
         construct_raw = str(row[args.construct_col])
@@ -337,12 +329,12 @@ def main():
 
     preds = np.array(preds, dtype=np.int32)
 
-    # 9) Attach predictions to the merged frame and save a full copy
+    # Attach predictions to the merged frame and save a full copy
     merged["gpt_pred"] = preds
     merged_path = f"{args.out_prefix}_merged_with_preds.csv"
     merged.to_csv(merged_path, index=False)
 
-    # 10) Evaluate metrics
+    # Evaluate metrics
     # Overall (same as before)
     valid_mask = ~pd.isna(merged["human_label"])
     if valid_mask.sum() == 0:
@@ -353,10 +345,9 @@ def main():
         y_pred_all = merged.loc[valid_mask, "gpt_pred"].astype(int).values
         overall_kappa = float(cohen_kappa_score(y_true_all, y_pred_all))
 
-    # ---- Per-construct table ----
     # For each construct, compute:
     # - frequency in data: proportion of human_label == 1 among evaluated rows
-    # - Hum–GPT κ
+    # - Hum–GPT kappa
     # - Hum–GPT precision
     # - Hum–GPT recall
     rows = []
@@ -377,16 +368,13 @@ def main():
         y_true = g.loc[mask, "human_label"].astype(int).values
         y_pred = g.loc[mask, "gpt_pred"].astype(int).values
 
-        # frequency = share of human positives (how often the construct occurs)
         freq = float((y_true == 1).mean())
 
-        # kappa can be undefined in degenerate cases; guard it
         try:
             kappa_c = float(cohen_kappa_score(y_true, y_pred))
         except Exception:
             kappa_c = None
 
-        # precision / recall (binary, 1 is positive)
         prec = float(precision_score(y_true, y_pred, zero_division=0))
         rec  = float(recall_score(y_true, y_pred, zero_division=0))
 
@@ -401,14 +389,14 @@ def main():
 
     per_construct_df = pd.DataFrame(rows).sort_values("construct").reset_index(drop=True)
 
-    # 11) Save artifacts
-    npy_path = f"{args.out_prefix}_preds.npy"
-    csv_path = f"{args.out_prefix}_preds.csv"
-    metrics_path = f"{args.out_prefix}_metrics.json"
-    per_construct_csv = f"{args.out_prefix}_per_construct_metrics.csv"
-    per_construct_json = f"{args.out_prefix}_per_construct_metrics.json"
+    # Save artifacts
+    npy_path = f"{args.out_prefix}_preds_run2.npy"
+    csv_path = f"{args.out_prefix}_preds_run2.csv"
+    metrics_path = f"{args.out_prefix}_metrics_run2.json"
+    per_construct_csv = f"{args.out_prefix}_per_construct_metrics_run2.csv"
+    per_construct_json = f"{args.out_prefix}_per_construct_metrics_run2.json"
 
-    # raw predictions (unchanged)
+    # raw predictions
     np.save(npy_path, preds)
     pd.DataFrame({
         "row_index": np.arange(len(preds)),
@@ -420,7 +408,7 @@ def main():
     with open(per_construct_json, "w") as f:
         json.dump(per_construct_df.to_dict(orient="records"), f, indent=2)
 
-    # overall metrics JSON (kept; now also includes paths to new files)
+    # overall metrics JSON
     metrics = {
         "model": model_name,
         "overall_kappa": overall_kappa,

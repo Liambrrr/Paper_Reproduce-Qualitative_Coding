@@ -1,0 +1,22 @@
+{
+  "model": "gpt-4o",
+  "overall_kappa": 0.36656365292140924,
+  "n_rows": 1414,
+  "n_eval_overall": 1414,
+  "merge_keys": [
+    "_id_key",
+    "_construct_canon"
+  ],
+  "columns": {
+    "text_col": "code_change_text",
+    "construct_col": "construct_name",
+    "id_col": "task_submit_id"
+  },
+  "artifacts": {
+    "merged_with_preds_csv": "study3_zeroshot_merged_with_preds.csv",
+    "preds_npy": "study3_zeroshot_preds_run2.npy",
+    "preds_csv": "study3_zeroshot_preds_run2.csv",
+    "per_construct_csv": "study3_zeroshot_per_construct_metrics_run2.csv",
+    "per_construct_json": "study3_zeroshot_per_construct_metrics_run2.json"
+  }
+}
