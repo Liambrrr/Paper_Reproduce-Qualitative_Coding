@@ -1,4 +1,18 @@
 #!/usr/bin/env python3
+'''
+Dependencies:
+    pip install openai pandas numpy scikit-learn
+
+Usage: 
+export OPENAI_API_KEY="API_KEY"
+python paper_replicate.py \
+  --raw_path "Raw_Data.xlsx"\
+  --coded_path "Coded_Data.csv"\
+  --id_col task_submit_id \
+  --construct_col construct_name \
+  --text_col code_change_text \
+  --model gpt-4o
+'''
 import argparse
 import json
 import os
