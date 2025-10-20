@@ -4,6 +4,7 @@ Author: **Liam Tang** (<ct2960@nyu.edu>)
 Date Created: **Oct 14th, 2025**  
 Paper: https://files.eric.ed.gov/fulltext/EJ1465623.pdf
 
+Run paper_replicate.py to call the model, run table_convert.py to check the result in table.
 ## Raw Dataset Table
 run 1 and 2 with gpt-4o, and run 3 with gpt-4-turbo-2024-04-09
 
