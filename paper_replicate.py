@@ -390,11 +390,11 @@ def main():
     per_construct_df = pd.DataFrame(rows).sort_values("construct").reset_index(drop=True)
 
     # Save artifacts
-    npy_path = f"{args.out_prefix}_preds_run2.npy"
-    csv_path = f"{args.out_prefix}_preds_run2.csv"
-    metrics_path = f"{args.out_prefix}_metrics_run2.json"
-    per_construct_csv = f"{args.out_prefix}_per_construct_metrics_run2.csv"
-    per_construct_json = f"{args.out_prefix}_per_construct_metrics_run2.json"
+    npy_path = f"{args.out_prefix}_preds_run3.npy"
+    csv_path = f"{args.out_prefix}_preds_run3.csv"
+    metrics_path = f"{args.out_prefix}_metrics_run3.json"
+    per_construct_csv = f"{args.out_prefix}_per_construct_metrics_run3.csv"
+    per_construct_json = f"{args.out_prefix}_per_construct_metrics_run3.json"
 
     # raw predictions
     np.save(npy_path, preds)
