@@ -73,7 +73,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",If Body,if body,214071,0,0
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Function Return,function return,214071,1,0
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Syntax Change,syntax change,214071,0,0
-214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Variable Usage and Assignment,variable usage and assignment,214071,0,0
+214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Variable Usage and Assignment,variable usage and assignment,214071,0,1
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Variable-type conversion,variable type conversion,214071,1,1
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Operator,operator,214071,0,0
 214071,"[Line modified] Original:`            return liczba % 2 = 0;`, New:`            return (double)liczba % 2 = 0;`. ",Variable-type Change,variable type change,214071,0,0
@@ -98,7 +98,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214072,"[Line modified] Original:`            return (double)liczba % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 = 0;`. ",Function Body,function body,214072,0,1
 214072,"[Line modified] Original:`            return (double)liczba % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 = 0;`. ",Comment,comment,214072,0,0
 214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",If Header,if header,214073,0,1
-214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",If Body,if body,214073,0,0
+214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",If Body,if body,214073,0,1
 214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",Function Return,function return,214073,1,1
 214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",Syntax Change,syntax change,214073,0,1
 214073,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 = 0;`, New:`            return Convert.ToDouble(liczba) % 2 == 0;`. ",Variable Usage and Assignment,variable usage and assignment,214073,0,1
@@ -116,7 +116,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Function Return,function return,214074,1,0
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Syntax Change,syntax change,214074,0,0
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Variable Usage and Assignment,variable usage and assignment,214074,0,1
-214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Variable-type conversion,variable type conversion,214074,1,1
+214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Variable-type conversion,variable type conversion,214074,1,0
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Operator,operator,214074,0,0
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Variable-type Change,variable type change,214074,0,0
 214074,"[Line modified] Original:`            return Convert.ToDouble(liczba) % 2 == 0;`, New:`            return liczba % 2 == 0;`. ",Value Change,value change,214074,0,1
@@ -139,9 +139,9 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214075,"[Line modified] Original:`            Console.WriteLine(CzyParzysta(2));`, New:`            Console.WriteLine(CzyParzysta(3));`. ",Testing,testing,214075,1,1
 214075,"[Line modified] Original:`            Console.WriteLine(CzyParzysta(2));`, New:`            Console.WriteLine(CzyParzysta(3));`. ",Function Body,function body,214075,0,0
 214075,"[Line modified] Original:`            Console.WriteLine(CzyParzysta(2));`, New:`            Console.WriteLine(CzyParzysta(3));`. ",Comment,comment,214075,0,0
-214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",If Header,if header,214080,0,0
+214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",If Header,if header,214080,0,1
 214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",If Body,if body,214080,0,0
-214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Function Return,function return,214080,1,0
+214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Function Return,function return,214080,1,1
 214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Syntax Change,syntax change,214080,0,1
 214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Variable Usage and Assignment,variable usage and assignment,214080,0,1
 214080,"[Line modified] Original:`            return znak <= a && znak <= z;`, New:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Variable-type conversion,variable type conversion,214080,1,1
@@ -162,7 +162,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Operator,operator,214081,1,1
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Variable-type Change,variable type change,214081,0,0
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Value Change,value change,214081,0,1
-214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Added Lines,added lines,214081,0,1
+214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Added Lines,added lines,214081,0,0
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Removed Lines,removed lines,214081,0,0
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Testing,testing,214081,0,0
 214081,"[Line modified] Original:`            return znak <= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`, New:`            return znak >= Convert.ToChar(""a"") && znak <= Convert.ToChar(""z"");`. ",Function Body,function body,214081,0,1
@@ -197,7 +197,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214092,"[Line modified] Original:`            ConsoleWriteline(CzyWKolejnosci(Convert.ToChar(Console.Readline(), Convert.ToChar(Console.Readline(), Convert.ToChar(Console.Readline())));`, New:`            ConsoleWriteline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`. ",Comment,comment,214092,0,0
 214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",If Header,if header,214094,0,1
 214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",If Body,if body,214094,0,0
-214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",Function Return,function return,214094,1,0
+214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",Function Return,function return,214094,1,1
 214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",Syntax Change,syntax change,214094,1,0
 214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",Variable Usage and Assignment,variable usage and assignment,214094,0,0
 214094,"[Line modified] Original:`            return a < b < c && a, b, c >= Convert.ToChar(""a"") && a, b, c <= Convert.ToChar(""z"") || a, b, c >= Convert.ToChar(""A"") && a, b, c <= Convert.ToChar(""Z""); `, New:`            return a < b < c && a; b; c >= Convert.ToChar(""a"") && a; b; c <= Convert.ToChar(""z"") || a; b; c >= Convert.ToChar(""A"") && a; b; c <= Convert.ToChar(""Z""); `. ",Variable-type conversion,variable type conversion,214094,0,1
@@ -253,9 +253,9 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            ConsoleWriteline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Comment,comment,214097,0,0
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",If Header,if header,214098,0,1
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",If Body,if body,214098,0,0
-214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Function Return,function return,214098,1,0
+214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Function Return,function return,214098,1,1
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Syntax Change,syntax change,214098,1,1
-214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Variable Usage and Assignment,variable usage and assignment,214098,0,1
+214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Variable Usage and Assignment,variable usage and assignment,214098,0,0
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Variable-type conversion,variable type conversion,214098,0,1
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Operator,operator,214098,0,1
 214098,"[Line modified] Original:`            return a < b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `. ",Variable-type Change,variable type change,214098,0,0
@@ -280,9 +280,9 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214100,"[Line modified] Original:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z"") && b >= Convert.ToChar(""a"") && b <= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z"") && c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""); `. ",Function Body,function body,214100,0,1
 214100,"[Line modified] Original:`            return a < b && b < c && a,b,c >= Convert.ToChar(""a"") && a,b,c <= Convert.ToChar(""z"") || a,b,c >= Convert.ToChar(""A"") && a,b,c <= Convert.ToChar(""Z""); `, New:`            return a < b && b < c && a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z"") && b >= Convert.ToChar(""a"") && b <= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z"") && c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""); `. ",Comment,comment,214100,0,0
 214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",If Header,if header,214101,0,0
-214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",If Body,if body,214101,0,0
+214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",If Body,if body,214101,0,1
 214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Function Return,function return,214101,0,0
-214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Syntax Change,syntax change,214101,1,0
+214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Syntax Change,syntax change,214101,1,1
 214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Variable Usage and Assignment,variable usage and assignment,214101,0,0
 214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Variable-type conversion,variable type conversion,214101,0,0
 214101,"[Line modified] Original:`            Console.Writeline(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`, New:`            Console.Writeline(""Hello World!"");`. ",Operator,operator,214101,0,0
@@ -586,7 +586,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if b <= Convert.ToChar(""A"") || b >= Convert.ToChar(""Z"") return false;`, New:`            if (b <= Convert.ToChar(""A"") || b >= Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"") return false;`, New:`            if (c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if c <= Convert.ToChar(""A"") || c >= Convert.ToChar(""Z"") return false;`, New:`            if (c <= Convert.ToChar(""A"") || c >= Convert.ToChar(""Z"")) return false;`. 
-[Line modified] Original:`            Console.ReadKey();`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`. ",Added Lines,added lines,214116,0,0
+[Line modified] Original:`            Console.ReadKey();`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`. ",Added Lines,added lines,214116,0,1
 214116,"[Line modified] Original:`            if a <= Convert.ToChar(""a"") || a >= Convert.ToChar(""z"") return false;`, New:`            if (a <= Convert.ToChar(""a"") || a >= Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if a <= Convert.ToChar(""A"") || a >= Convert.ToChar(""Z"") return false;`, New:`            if (a <= Convert.ToChar(""A"") || a >= Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if b <= Convert.ToChar(""a"") || b >= Convert.ToChar(""z"") return false;`, New:`            if (b <= Convert.ToChar(""a"") || b >= Convert.ToChar(""z"")) return false;`. 
@@ -620,13 +620,13 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Function Return,function return,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Syntax Change,syntax change,214120,1,1
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Variable Usage and Assignment,variable usage and assignment,214120,0,0
-214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Variable-type conversion,variable type conversion,214120,0,1
+214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Variable-type conversion,variable type conversion,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Operator,operator,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Variable-type Change,variable type change,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Value Change,value change,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Added Lines,added lines,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Removed Lines,removed lines,214120,0,0
-214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Testing,testing,214120,1,1
+214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Testing,testing,214120,1,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Function Body,function body,214120,0,0
 214120,"[Line modified] Original:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c""));`, New:`            Console.WriteLine(CzyWKolejnosci(Convert.ToChar(""a""), Convert.ToChar(""b""), Convert.ToChar(""c"")));`. ",Comment,comment,214120,0,0
 214123,"[Line modified] Original:`            if (a !< b) return false;`, New:`            if (a > b) return false;`. 
@@ -662,7 +662,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"")) return false;`. ",If Header,if header,214125,1,1
 214125,"[Line modified] Original:`            if (a <= Convert.ToChar(""a"") || a >= Convert.ToChar(""z"")) return false;`, New:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if (b <= Convert.ToChar(""a"") || b >= Convert.ToChar(""z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"")) return false;`. 
-[Line modified] Original:`            if (c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"")) return false;`. ",If Body,if body,214125,0,1
+[Line modified] Original:`            if (c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"")) return false;`. ",If Body,if body,214125,0,0
 214125,"[Line modified] Original:`            if (a <= Convert.ToChar(""a"") || a >= Convert.ToChar(""z"")) return false;`, New:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if (b <= Convert.ToChar(""a"") || b >= Convert.ToChar(""z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if (c <= Convert.ToChar(""a"") || c >= Convert.ToChar(""z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"")) return false;`. ",Function Return,function return,214125,0,0
@@ -776,7 +776,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""A"") || b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"")) return false;`. 
-[Line modified] Original:`            if (c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Function Body,function body,214128,0,0
+[Line modified] Original:`            if (c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Function Body,function body,214128,0,1
 214128,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"")) return false;`, New:`            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"")) return false;`. 
 [Line modified] Original:`            if (a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z"")) return false;`, New:`            if (a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"")) return false;`. 
@@ -941,7 +941,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",If Body,if body,214148,0,1
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Function Return,function return,214148,0,0
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Syntax Change,syntax change,214148,0,0
-214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Variable Usage and Assignment,variable usage and assignment,214148,1,0
+214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Variable Usage and Assignment,variable usage and assignment,214148,1,1
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Variable-type conversion,variable type conversion,214148,0,1
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Operator,operator,214148,0,0
 214148,"[Line modified] Original:`            if (a < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. ",Variable-type Change,variable type change,214148,0,0
@@ -995,7 +995,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line added] `            else return false;`. 
 [Line added] `            if (c < Convert.ToChar(""a"") && c >= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z"")));`. 
 [Line added] `            else return false;`. 
-[Line modified] Original:`            else return true;`, New:`            return true;`. ",Function Return,function return,214152,1,1
+[Line modified] Original:`            else return true;`, New:`            return true;`. ",Function Return,function return,214152,1,0
 214152,"[Line added] `            bool da, db, dc;`. 
 [Line removed] `            if (a > b && b >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"")) return false;`. 
 [Line removed] `            if (b > c && c >= Convert.ToChar(""z"") && c <= Convert.ToChar(""z"")) return false;`. 
@@ -1220,7 +1220,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") && c >= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`, New:`            if (c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`. ",Variable Usage and Assignment,variable usage and assignment,214154,0,0
 214154,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") && a >= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`, New:`            if (a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") && b >= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z""));`, New:`            if (b >= Convert.ToChar(""a"") && b <= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z""));`. 
-[Line modified] Original:`            if (c < Convert.ToChar(""a"") && c >= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`, New:`            if (c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`. ",Variable-type conversion,variable type conversion,214154,0,0
+[Line modified] Original:`            if (c < Convert.ToChar(""a"") && c >= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`, New:`            if (c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`. ",Variable-type conversion,variable type conversion,214154,0,1
 214154,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") && a >= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`, New:`            if (a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") && b >= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z""));`, New:`            if (b >= Convert.ToChar(""a"") && b <= Convert.ToChar(""z"") || b >= Convert.ToChar(""A"") && b <= Convert.ToChar(""Z""));`. 
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") && c >= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`, New:`            if (c >= Convert.ToChar(""a"") && c <= Convert.ToChar(""z"") || c >= Convert.ToChar(""A"") && c <= Convert.ToChar(""Z""));`. ",Operator,operator,214154,1,1
@@ -1253,7 +1253,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z""));`, New:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",If Body,if body,214156,1,1
 214156,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z""));`, New:`            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z""));`, New:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. 
-[Line modified] Original:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z""));`, New:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Function Return,function return,214156,1,0
+[Line modified] Original:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z""));`, New:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Function Return,function return,214156,1,1
 214156,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z""));`, New:`            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z""));`, New:`            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z""));`, New:`            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Syntax Change,syntax change,214156,1,0
@@ -1312,7 +1312,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214157,"[Line modified] Original:`            if (a > b && da == true && db == false) return false;`, New:`            if (a > b || da == true && db == false) return false;`. 
 [Line modified] Original:`            if (b > c && db == true && dc == false) return false;`, New:`            if (b > c || db == true && dc == false) return false;`. ",Testing,testing,214157,0,0
 214157,"[Line modified] Original:`            if (a > b && da == true && db == false) return false;`, New:`            if (a > b || da == true && db == false) return false;`. 
-[Line modified] Original:`            if (b > c && db == true && dc == false) return false;`, New:`            if (b > c || db == true && dc == false) return false;`. ",Function Body,function body,214157,0,0
+[Line modified] Original:`            if (b > c && db == true && dc == false) return false;`, New:`            if (b > c || db == true && dc == false) return false;`. ",Function Body,function body,214157,0,1
 214157,"[Line modified] Original:`            if (a > b && da == true && db == false) return false;`, New:`            if (a > b || da == true && db == false) return false;`. 
 [Line modified] Original:`            if (b > c && db == true && dc == false) return false;`, New:`            if (b > c || db == true && dc == false) return false;`. ",Comment,comment,214157,0,0
 214159,"[Line modified] Original:`            if (a > b || da == true && db == false) return false;`, New:`            if (a > b && da == false && db == true) return false;`. 
@@ -1328,7 +1328,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214159,"[Line modified] Original:`            if (a > b || da == true && db == false) return false;`, New:`            if (a > b && da == false && db == true) return false;`. 
 [Line modified] Original:`            if (b > c || db == true && dc == false) return false;`, New:`            if (b > c && db == false && dc == true) return false;`. ",Variable-type conversion,variable type conversion,214159,0,0
 214159,"[Line modified] Original:`            if (a > b || da == true && db == false) return false;`, New:`            if (a > b && da == false && db == true) return false;`. 
-[Line modified] Original:`            if (b > c || db == true && dc == false) return false;`, New:`            if (b > c && db == false && dc == true) return false;`. ",Operator,operator,214159,1,0
+[Line modified] Original:`            if (b > c || db == true && dc == false) return false;`, New:`            if (b > c && db == false && dc == true) return false;`. ",Operator,operator,214159,1,1
 214159,"[Line modified] Original:`            if (a > b || da == true && db == false) return false;`, New:`            if (a > b && da == false && db == true) return false;`. 
 [Line modified] Original:`            if (b > c || db == true && dc == false) return false;`, New:`            if (b > c && db == false && dc == true) return false;`. ",Variable-type Change,variable type change,214159,0,0
 214159,"[Line modified] Original:`            if (a > b || da == true && db == false) return false;`, New:`            if (a > b && da == false && db == true) return false;`. 
@@ -1396,7 +1396,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`. ",Function Return,function return,214162,0,0
 214162,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z"")) return false;`, New:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"") && a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") || b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"") && b < Convert.ToChar(""A"") || b > Convert.ToChar(""Z"")) return false;`. 
-[Line modified] Original:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`. ",Syntax Change,syntax change,214162,0,0
+[Line modified] Original:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`. ",Syntax Change,syntax change,214162,0,1
 214162,"[Line modified] Original:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"") || a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z"")) return false;`, New:`            if (a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"") && a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"") || b < Convert.ToChar(""A"") || b > Convert.ToChar(""Z"")) return false;`, New:`            if (b < Convert.ToChar(""a"") || b > Convert.ToChar(""z"") && b < Convert.ToChar(""A"") || b > Convert.ToChar(""Z"")) return false;`. 
 [Line modified] Original:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") || c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`, New:`            if (c < Convert.ToChar(""a"") || c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") || c > Convert.ToChar(""Z"")) return false;`. ",Variable Usage and Assignment,variable usage and assignment,214162,0,0
@@ -1544,7 +1544,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Function Return,function return,214222,0,0
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Syntax Change,syntax change,214222,0,1
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Variable Usage and Assignment,variable usage and assignment,214222,1,1
-214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Variable-type conversion,variable type conversion,214222,0,0
+214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Variable-type conversion,variable type conversion,214222,0,1
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Operator,operator,214222,0,0
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Variable-type Change,variable type change,214222,0,0
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Value Change,value change,214222,0,1
@@ -1554,7 +1554,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Function Body,function body,214222,0,0
 214222,"[Line modified] Original:`            else c_value = Convert.ToInt32(b) + 32;`, New:`            else b_value = Convert.ToInt32(b) + 32;`. ",Comment,comment,214222,0,0
 214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,If Header,if header,214226,0,1
-214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,If Body,if body,214226,0,1
+214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,If Body,if body,214226,0,0
 214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,Function Return,function return,214226,0,0
 214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,Syntax Change,syntax change,214226,0,0
 214226,[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. ,Variable Usage and Assignment,variable usage and assignment,214226,0,0
@@ -1570,7 +1570,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214232,"[Line removed] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
 [Line added] `            if (a_value >= c_value) return false;`. ",If Header,if header,214232,0,1
 214232,"[Line removed] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
-[Line added] `            if (a_value >= c_value) return false;`. ",If Body,if body,214232,0,0
+[Line added] `            if (a_value >= c_value) return false;`. ",If Body,if body,214232,0,1
 214232,"[Line removed] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
 [Line added] `            if (a_value >= c_value) return false;`. ",Function Return,function return,214232,0,0
 214232,"[Line removed] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
@@ -1598,7 +1598,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214235,"[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
 [Line removed] `            if (a_value >= c_value) return false;`. ",If Header,if header,214235,0,1
 214235,"[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
-[Line removed] `            if (a_value >= c_value) return false;`. ",If Body,if body,214235,0,1
+[Line removed] `            if (a_value >= c_value) return false;`. ",If Body,if body,214235,0,0
 214235,"[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
 [Line removed] `            if (a_value >= c_value) return false;`. ",Function Return,function return,214235,0,0
 214235,"[Line added] `            if (a_value == b_value || b_value == c_value || a_value == c_value) return false;`. 
@@ -1628,7 +1628,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line added] `            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",If Header,if header,214239,0,1
 214239,"[Line added] `            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") && a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z"")) return false;`. 
 [Line added] `            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") && b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. 
-[Line added] `            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",If Body,if body,214239,0,0
+[Line added] `            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",If Body,if body,214239,0,1
 214239,"[Line added] `            if (a < Convert.ToChar(""a"") && a > Convert.ToChar(""z"") && a < Convert.ToChar(""A"") && a > Convert.ToChar(""Z"")) return false;`. 
 [Line added] `            if (b < Convert.ToChar(""a"") && b > Convert.ToChar(""z"") && b < Convert.ToChar(""A"") && b > Convert.ToChar(""Z"")) return false;`. 
 [Line added] `            if (c < Convert.ToChar(""a"") && c > Convert.ToChar(""z"") && c < Convert.ToChar(""A"") && c > Convert.ToChar(""Z"")) return false;`. ",Function Return,function return,214239,0,0
@@ -1796,7 +1796,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214258,"[Line modified] Original:`            if (a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`, New:`            if ((a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"")) && (a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z""))) return false;`. 
 [Line modified] Original:`            else return false;`, New:`            else;`. 
 [Line modified] Original:`            else return false;`, New:`            else;`. 
-[Line modified] Original:`            else return false;`, New:`            else;`. ",Variable Usage and Assignment,variable usage and assignment,214258,0,1
+[Line modified] Original:`            else return false;`, New:`            else;`. ",Variable Usage and Assignment,variable usage and assignment,214258,0,0
 214258,"[Line modified] Original:`            if (a >= Convert.ToChar(""a"") && a <= Convert.ToChar(""z"") || a >= Convert.ToChar(""A"") && a <= Convert.ToChar(""Z""));`, New:`            if ((a < Convert.ToChar(""a"") || a > Convert.ToChar(""z"")) && (a < Convert.ToChar(""A"") || a > Convert.ToChar(""Z""))) return false;`. 
 [Line modified] Original:`            else return false;`, New:`            else;`. 
 [Line modified] Original:`            else return false;`, New:`            else;`. 
@@ -1840,7 +1840,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214452,"[Line added] `            int a = 0;`. 
 [Line modified] Original:`            int a = 0;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyZero(a));// tu wywołaj funkcję i sprawdź jej działanie`. ",Function Return,function return,214452,0,0
 214452,"[Line added] `            int a = 0;`. 
-[Line modified] Original:`            int a = 0;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyZero(a));// tu wywołaj funkcję i sprawdź jej działanie`. ",Syntax Change,syntax change,214452,0,1
+[Line modified] Original:`            int a = 0;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyZero(a));// tu wywołaj funkcję i sprawdź jej działanie`. ",Syntax Change,syntax change,214452,0,0
 214452,"[Line added] `            int a = 0;`. 
 [Line modified] Original:`            int a = 0;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyZero(a));// tu wywołaj funkcję i sprawdź jej działanie`. ",Variable Usage and Assignment,variable usage and assignment,214452,0,1
 214452,"[Line added] `            int a = 0;`. 
@@ -1870,7 +1870,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Operator,operator,214454,0,0
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Variable-type Change,variable type change,214454,1,1
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Value Change,value change,214454,0,1
-214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Added Lines,added lines,214454,0,1
+214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Added Lines,added lines,214454,0,0
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Removed Lines,removed lines,214454,0,0
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Testing,testing,214454,1,0
 214454,"[Line modified] Original:`            int x = 1`, New:`            double x = 1`. ",Function Body,function body,214454,0,0
@@ -1932,7 +1932,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214465,"[Line modified] Original:`            Console.WriteLine(CzyMalaLitera(a));// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyMalaLitera(znak));// tu wywołaj funkcję i sprawdź jej działanie`. ",Function Body,function body,214465,0,0
 214465,"[Line modified] Original:`            Console.WriteLine(CzyMalaLitera(a));// tu wywołaj funkcję i sprawdź jej działanie`, New:`            Console.WriteLine(CzyMalaLitera(znak));// tu wywołaj funkcję i sprawdź jej działanie`. ",Comment,comment,214465,0,1
 214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",If Header,if header,214466,1,1
-214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",If Body,if body,214466,0,1
+214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",If Body,if body,214466,0,0
 214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",Function Return,function return,214466,0,0
 214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",Syntax Change,syntax change,214466,0,1
 214466,"[Line modified] Original:`            if (Convert.ToInt32(znak)>97 && Convert.ToInt32(znak) < 122)`, New:`            if (Convert.ToInt32(znak)>=97 && Convert.ToInt32(znak) <= 122)`. ",Variable Usage and Assignment,variable usage and assignment,214466,0,1
@@ -1960,7 +1960,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214470,"[Line modified] Original:`            if (Convert.ToInt32(znak) >= 65 && Convert.ToInt32(znak) <= 90 && Convert.ToInt32(znak) >= 97 && Convert.ToInt32(znak) <= 122)`, New:`            if (Convert.ToInt32(znak) >= 65 && Convert.ToInt32(znak) <= 90 || Convert.ToInt32(znak) >= 97 && Convert.ToInt32(znak) <= 122)`. ",Function Body,function body,214470,0,1
 214470,"[Line modified] Original:`            if (Convert.ToInt32(znak) >= 65 && Convert.ToInt32(znak) <= 90 && Convert.ToInt32(znak) >= 97 && Convert.ToInt32(znak) <= 122)`, New:`            if (Convert.ToInt32(znak) >= 65 && Convert.ToInt32(znak) <= 90 || Convert.ToInt32(znak) >= 97 && Convert.ToInt32(znak) <= 122)`. ",Comment,comment,214470,0,0
 214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",If Header,if header,214476,1,1
-214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",If Body,if body,214476,0,0
+214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",If Body,if body,214476,0,1
 214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",Function Return,function return,214476,0,0
 214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",Syntax Change,syntax change,214476,1,1
 214476,"[Line modified] Original:`            if (teskt 1 == tekst 2)`, New:`            if (teskt1 == tekst2)`. ",Variable Usage and Assignment,variable usage and assignment,214476,1,0
@@ -1980,7 +1980,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214477,"[Line modified] Original:`            string teskt1 = '';`, New:`            string teskt1 = 'aa';`. 
 [Line modified] Original:`            string teskt2 = '';`, New:`            string teskt2 = 'aa';`. ",Function Return,function return,214477,0,0
 214477,"[Line modified] Original:`            string teskt1 = '';`, New:`            string teskt1 = 'aa';`. 
-[Line modified] Original:`            string teskt2 = '';`, New:`            string teskt2 = 'aa';`. ",Syntax Change,syntax change,214477,0,0
+[Line modified] Original:`            string teskt2 = '';`, New:`            string teskt2 = 'aa';`. ",Syntax Change,syntax change,214477,0,1
 214477,"[Line modified] Original:`            string teskt1 = '';`, New:`            string teskt1 = 'aa';`. 
 [Line modified] Original:`            string teskt2 = '';`, New:`            string teskt2 = 'aa';`. ",Variable Usage and Assignment,variable usage and assignment,214477,1,1
 214477,"[Line modified] Original:`            string teskt1 = '';`, New:`            string teskt1 = 'aa';`. 
@@ -2009,7 +2009,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Variable-type conversion,variable type conversion,214478,0,0
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Operator,operator,214478,0,0
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Variable-type Change,variable type change,214478,0,0
-214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Value Change,value change,214478,0,1
+214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Value Change,value change,214478,0,0
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Added Lines,added lines,214478,0,0
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Removed Lines,removed lines,214478,0,0
 214478,"[Line modified] Original:`            string teskt1 = 'aa';`, New:`            string teskt1 = aa;`. ",Testing,testing,214478,1,0
@@ -2117,12 +2117,12 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",If Body,if body,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Function Return,function return,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Syntax Change,syntax change,214484,1,1
-214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Variable Usage and Assignment,variable usage and assignment,214484,0,1
+214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Variable Usage and Assignment,variable usage and assignment,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Variable-type conversion,variable type conversion,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Operator,operator,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Variable-type Change,variable type change,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Value Change,value change,214484,0,1
-214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Added Lines,added lines,214484,0,1
+214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Added Lines,added lines,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Removed Lines,removed lines,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Testing,testing,214484,0,0
 214484,"[Line modified] Original:`            if ((teskt.Lenght+znak.Lenght)%2 ==1)`, New:`            if ((tekst.Lenght+znak)%2 ==1)`. ",Function Body,function body,214484,0,0
@@ -2134,7 +2134,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214599,"[Line modified] Original:`            CzyZero = a ==0;// tu dodaj swój kod`, New:`            x = a ==0;// tu dodaj swój kod`. 
 [Line modified] Original:`            return CzyZero;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            return x;// tu wywołaj funkcję i sprawdź jej działanie`. ",Function Return,function return,214599,0,0
 214599,"[Line modified] Original:`            CzyZero = a ==0;// tu dodaj swój kod`, New:`            x = a ==0;// tu dodaj swój kod`. 
-[Line modified] Original:`            return CzyZero;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            return x;// tu wywołaj funkcję i sprawdź jej działanie`. ",Syntax Change,syntax change,214599,1,1
+[Line modified] Original:`            return CzyZero;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            return x;// tu wywołaj funkcję i sprawdź jej działanie`. ",Syntax Change,syntax change,214599,1,0
 214599,"[Line modified] Original:`            CzyZero = a ==0;// tu dodaj swój kod`, New:`            x = a ==0;// tu dodaj swój kod`. 
 [Line modified] Original:`            return CzyZero;// tu wywołaj funkcję i sprawdź jej działanie`, New:`            return x;// tu wywołaj funkcję i sprawdź jej działanie`. ",Variable Usage and Assignment,variable usage and assignment,214599,1,1
 214599,"[Line modified] Original:`            CzyZero = a ==0;// tu dodaj swój kod`, New:`            x = a ==0;// tu dodaj swój kod`. 
@@ -2163,7 +2163,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Variable-type conversion,variable type conversion,214600,0,1
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Operator,operator,214600,0,0
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Variable-type Change,variable type change,214600,0,1
-214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Value Change,value change,214600,0,0
+214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Value Change,value change,214600,0,1
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Added Lines,added lines,214600,0,0
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Removed Lines,removed lines,214600,0,0
 214600,"[Line modified] Original:`            x = a ==0;// tu dodaj swój kod`, New:`            bool x = a ==0;// tu dodaj swój kod`. ",Testing,testing,214600,0,0
@@ -2211,7 +2211,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214603,"[Line added] `            bool x = a ==0;`. 
 [Line modified] Original:`            bool x = a ==0;// tu dodaj swój kod`, New:`            return x;// tu dodaj swój kod`. 
 [Line modified] Original:`            return x;// tu wywołaj funkcję i sprawdź jej działanie`, New:`           // tu wywołaj funkcję i sprawdź jej działanie`. ",Comment,comment,214603,0,1
-214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",If Header,if header,214605,0,1
+214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",If Header,if header,214605,0,0
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",If Body,if body,214605,0,1
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",Function Return,function return,214605,0,0
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",Syntax Change,syntax change,214605,0,1
@@ -2225,7 +2225,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",Testing,testing,214605,0,0
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",Function Body,function body,214605,1,0
 214605,"[Line modified] Original:`            a = x > 0;`, New:`            bool a = x > 0;`. ",Comment,comment,214605,0,0
-214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",If Header,if header,214607,0,0
+214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",If Header,if header,214607,0,1
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",If Body,if body,214607,0,0
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Function Return,function return,214607,0,0
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Syntax Change,syntax change,214607,0,1
@@ -2233,7 +2233,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Variable-type conversion,variable type conversion,214607,0,0
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Operator,operator,214607,1,1
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Variable-type Change,variable type change,214607,0,0
-214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Value Change,value change,214607,0,0
+214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Value Change,value change,214607,0,1
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Added Lines,added lines,214607,0,0
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Removed Lines,removed lines,214607,0,0
 214607,"[Line modified] Original:`            bool x = liczba % 2 = 0;`, New:`            bool x = liczba % 2 == 0;`. ",Testing,testing,214607,0,0
@@ -2243,11 +2243,11 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",If Body,if body,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Function Return,function return,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Syntax Change,syntax change,214615,1,1
-214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Variable Usage and Assignment,variable usage and assignment,214615,0,0
+214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Variable Usage and Assignment,variable usage and assignment,214615,0,1
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Variable-type conversion,variable type conversion,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Operator,operator,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Variable-type Change,variable type change,214615,0,0
-214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Value Change,value change,214615,0,1
+214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Value Change,value change,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Added Lines,added lines,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Removed Lines,removed lines,214615,0,0
 214615,"[Line modified] Original:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0`, New:`            bool x = liczba > 0 && liczba % 2 == 0 && liczba % 3 != 0;`. ",Testing,testing,214615,0,0
@@ -2258,7 +2258,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Function Return,function return,214618,0,0
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Syntax Change,syntax change,214618,1,1
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Variable Usage and Assignment,variable usage and assignment,214618,1,1
-214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Variable-type conversion,variable type conversion,214618,0,1
+214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Variable-type conversion,variable type conversion,214618,0,0
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Operator,operator,214618,0,0
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Variable-type Change,variable type change,214618,0,0
 214618,"[Line modified] Original:`        bool x = char >= 'a' && <= 'z';`, New:`        bool x = znak  >= 'a' && znak <= 'z';`. ",Value Change,value change,214618,0,1
@@ -2279,10 +2279,10 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Added Lines,added lines,214641,0,0
 214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Removed Lines,removed lines,214641,0,0
 214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Testing,testing,214641,0,0
-214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Function Body,function body,214641,0,1
+214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Function Body,function body,214641,0,0
 214641,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2) == r);`, New:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Comment,comment,214641,0,0
 214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",If Header,if header,214643,0,0
-214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",If Body,if body,214643,0,0
+214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",If Body,if body,214643,0,1
 214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Function Return,function return,214643,1,1
 214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Syntax Change,syntax change,214643,0,1
 214643,"[Line modified] Original:`            return Math.Sqrt(Math.Pow((X1-Y1), 2) + Math.Pow((Y1-Ys), 2)) == r;`, New:`            return Math.Sqrt(Math.Pow((X1-Xs), 2) + Math.Pow((Y1-Ys), 2)) == r;`. ",Variable Usage and Assignment,variable usage and assignment,214643,1,1
@@ -2304,7 +2304,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Operator,operator,214672,0,0
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Variable-type Change,variable type change,214672,0,1
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Value Change,value change,214672,0,1
-214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Added Lines,added lines,214672,0,0
+214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Added Lines,added lines,214672,0,1
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Removed Lines,removed lines,214672,0,0
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Testing,testing,214672,0,0
 214672,"[Line modified] Original:`            else return znak;`, New:`            else return Convert.ToString(znak);`. ",Function Body,function body,214672,0,1
@@ -2354,7 +2354,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",If Header,if header,214692,1,1
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",If Body,if body,214692,0,1
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Function Return,function return,214692,0,0
-214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Syntax Change,syntax change,214692,0,0
+214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Syntax Change,syntax change,214692,0,1
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Variable Usage and Assignment,variable usage and assignment,214692,0,0
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Variable-type conversion,variable type conversion,214692,1,1
 214692,"[Line modified] Original:`            if ((int)tekst2.Length < (int)(tekst1.Length/2)) return tekst1+tekst2;`, New:`            if (tekst2.Length <= (tekst1.Length/2)) return tekst1+tekst2;`. ",Operator,operator,214692,1,1
@@ -2478,7 +2478,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 [Line modified] Original:`            if (b < 0 && b % 2 != 0) return true;`, New:`            if (b > 0 && b % 3 != 0) return true;`. 
 [Line modified] Original:`            if (c < 0 && c % 2 != 0) return true;`, New:`            if (c > 0 && c % 3 != 0) return true;`. ",Comment,comment,214702,0,0
 214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",If Header,if header,214705,0,0
-214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",If Body,if body,214705,1,0
+214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",If Body,if body,214705,1,1
 214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",Function Return,function return,214705,1,1
 214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",Syntax Change,syntax change,214705,0,1
 214705,"[Line modified] Original:`            else return ((a+2b-5c)/a)c;`, New:`            else return ((a+2b-5c)/a)*c;`. ",Variable Usage and Assignment,variable usage and assignment,214705,0,0
@@ -2697,12 +2697,12 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Variable-type Change,variable type change,207531,0,0
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Value Change,value change,207531,0,0
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Added Lines,added lines,207531,0,0
-207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Removed Lines,removed lines,207531,0,0
+207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Removed Lines,removed lines,207531,0,1
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Testing,testing,207531,0,0
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Function Body,function body,207531,0,0
 207531,"[Line modified] Original:`            Console.WriteLine(wynik);`, New:`           // Console.WriteLine(wynik);`. ",Comment,comment,207531,1,1
 207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",If Header,if header,207535,0,0
-207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",If Body,if body,207535,0,0
+207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",If Body,if body,207535,0,1
 207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",Function Return,function return,207535,0,0
 207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",Syntax Change,syntax change,207535,0,0
 207535,"[Line modified] Original:`using System;`, New:`//using System;`. ",Variable Usage and Assignment,variable usage and assignment,207535,0,0
@@ -2747,7 +2747,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,If Body,if body,208674,0,0
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Function Return,function return,208674,0,0
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Syntax Change,syntax change,208674,0,0
-208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Variable Usage and Assignment,variable usage and assignment,208674,0,1
+208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Variable Usage and Assignment,variable usage and assignment,208674,0,0
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Variable-type conversion,variable type conversion,208674,0,0
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Operator,operator,208674,0,0
 208674,[Line removed] `            Console.WriteLine(long.MaxValue);`. ,Variable-type Change,variable type change,208674,0,0
@@ -2794,7 +2794,7 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 209024,"[Line removed] `            int a = ;`. 
 [Line removed] `            int b = ;`.",Syntax Change,syntax change,209024,0,0
 209024,"[Line removed] `            int a = ;`. 
-[Line removed] `            int b = ;`.",Variable Usage and Assignment,variable usage and assignment,209024,0,0
+[Line removed] `            int b = ;`.",Variable Usage and Assignment,variable usage and assignment,209024,0,1
 209024,"[Line removed] `            int a = ;`. 
 [Line removed] `            int b = ;`.",Variable-type conversion,variable type conversion,209024,0,0
 209024,"[Line removed] `            int a = ;`. 
@@ -2825,5 +2825,5 @@ task_submit_id,code_change_text,construct_name,_construct_canon,_id_key,human_la
 209026,[Line removed] `            int wynik = a+b ;`. ,Added Lines,added lines,209026,0,1
 209026,[Line removed] `            int wynik = a+b ;`. ,Removed Lines,removed lines,209026,1,1
 209026,[Line removed] `            int wynik = a+b ;`. ,Testing,testing,209026,1,0
-209026,[Line removed] `            int wynik = a+b ;`. ,Function Body,function body,209026,0,1
+209026,[Line removed] `            int wynik = a+b ;`. ,Function Body,function body,209026,0,0
 209026,[Line removed] `            int wynik = a+b ;`. ,Comment,comment,209026,0,1

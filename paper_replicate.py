@@ -11,7 +11,7 @@ python paper_replicate.py \
   --id_col task_submit_id \
   --construct_col construct_name \
   --text_col code_change_text \
-  --model gpt-4o
+  --model gpt-4-turbo-2024-04-09
 '''
 import argparse
 import json
@@ -404,11 +404,11 @@ def main():
     per_construct_df = pd.DataFrame(rows).sort_values("construct").reset_index(drop=True)
 
     # Save artifacts
-    npy_path = f"{args.out_prefix}_preds_run3.npy"
-    csv_path = f"{args.out_prefix}_preds_run3.csv"
-    metrics_path = f"{args.out_prefix}_metrics_run3.json"
-    per_construct_csv = f"{args.out_prefix}_per_construct_metrics_run3.csv"
-    per_construct_json = f"{args.out_prefix}_per_construct_metrics_run3.json"
+    npy_path = f"{args.out_prefix}_preds_run1.npy"
+    csv_path = f"{args.out_prefix}_preds_run1.csv"
+    metrics_path = f"{args.out_prefix}_metrics_run1.json"
+    per_construct_csv = f"{args.out_prefix}_per_construct_metrics_run1.csv"
+    per_construct_json = f"{args.out_prefix}_per_construct_metrics_run1.json"
 
     # raw predictions
     np.save(npy_path, preds)

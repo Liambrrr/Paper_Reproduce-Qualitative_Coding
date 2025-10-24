@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Usage:
-  python table_convert.py study3_zeroshot_per_construct_metrics.json --title "Construct Metrics"
+  python table_convert.py study3_zeroshot_per_construct_metrics_run1.json --title "Construct Metrics Run1"
 
 Dependencies:
   pip install pandas matplotlib tabulate
