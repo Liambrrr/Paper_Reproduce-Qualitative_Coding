@@ -4,8 +4,13 @@ Author: **Liam Tang** (<ct2960@nyu.edu>)
 Date Created: **Oct 14th, 2025**  
 Paper: https://files.eric.ed.gov/fulltext/EJ1465623.pdf
 
-Run paper_replicate.py to call the model, run table_convert.py to check the result in table.
+Run paper_replicate_system_prompt.py to call the model, run table_convert.py to check the result in table.
 ## Raw Dataset Table
+
+### Main Results
+
+*(Metrics averaged across runs 4 and 5 with standard deviations)*
+
 | construct                     |   freq paper |   freq run4 |   freq run5 |   mean freq |   std freq |   kappa paper |   kappa run4 |   kappa run5 |   mean kappa |   std kappa |   prec paper |   prec run4 |   prec run5 |   mean prec |   std prec |   recall paper |   recall run4 |   recall run5 |   mean recall |   std recall |
 |-------------------------------|--------------|-------------|-------------|-------------|------------|---------------|--------------|--------------|--------------|-------------|--------------|-------------|-------------|-------------|------------|----------------|---------------|---------------|---------------|--------------|
 | added lines                   |        11 |          11 |          11 |          11 |       0.00 |          0.93 |         0.91 |         0.91 |         0.91 |        0.00 |         0.88 |        0.85 |        0.85 |        0.85 |       0.00 |           1.00 |          1.00 |          1.00 |          1.00 |         0.00 |
@@ -22,6 +27,10 @@ Run paper_replicate.py to call the model, run table_convert.py to check the resu
 | variable usage and assignment |        16 |          22 |          22 |          22 |       0.00 |          0.30 |         0.28 |         0.37 |         0.33 |        0.06 |         0.33 |        0.38 |        0.42 |        0.40 |       0.03 |           0.85 |          0.64 |          0.77 |          0.71 |         0.09 |
 | variable-type change          |         3 |           1 |           1 |           1 |       0.00 |          0.45 |         0.32 |         0.39 |         0.35 |        0.05 |         0.40 |        0.20 |        0.25 |        0.23 |       0.04 |           0.80 |          1.00 |          1.00 |          1.00 |         0.00 |
 | variable-type conversion      |         9 |          12 |          12 |          12 |       0.00 |          0.57 |         0.35 |         0.29 |         0.32 |        0.04 |         0.47 |        0.31 |        0.48 |        0.40 |       0.12 |           0.96 |          1.00 |          0.92 |          0.96 |         0.06 |
+
+### Significance Tests (p-values)
+
+*(Two-tailed t-tests comparing paper results vs reproduced runs)*
 
 | metric        |   p_value |
 |---------------|-----------|
