@@ -1,14 +1,36 @@
 # Paper_Reproduce-Qualitative_Coding (Raw Data)
 
-Author: **Liam Tang** (<ct2960@nyu.edu>)  
-Date Created: **Oct 14th, 2025**  
-Paper: https://files.eric.ed.gov/fulltext/EJ1465623.pdf
+## Overview
+Replication results of paper *Qualitative Coding with GPT-4: Where it Works Better*.
 
-Run paper_replicate_system_prompt.py to call the model, run table_convert.py to check the result in table.
-## Raw Dataset Table
+## Quick Start
+### Environment Setup
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Run Pipeline
+```bash
+# run paper_replicate_system_prompt.py
+export OPENAI_API_KEY="API_KEY"
+python paper_replicate_system_prompt.py \
+  --raw_path "Raw_Data.xlsx"\
+  --coded_path "Coded_Data.csv"\
+  --id_col task_submit_id \
+  --construct_col construct_name \
+  --text_col code_change_text \
+  --model gpt-4-turbo-2024-04-09
+
+# convert results to table
+python table_convert.py run4/study3_zeroshot_per_construct_metrics_run4.json \ 
+  --title "Construct Metrics Run1"
+```
+
+## Results
 
 ### Main Results
-
 *(Metrics averaged across runs 4 and 5 with standard deviations)*
 
 | construct                     |   freq paper |   freq run4 |   freq run5 |   mean freq |   std freq |   kappa paper |   kappa run4 |   kappa run5 |   mean kappa |   std kappa |   prec paper |   prec run4 |   prec run5 |   mean prec |   std prec |   recall paper |   recall run4 |   recall run5 |   mean recall |   std recall |
@@ -42,3 +64,6 @@ Run paper_replicate_system_prompt.py to call the model, run table_convert.py to 
 | prec p run5   |    0.0369 |
 | recall p run4 |    0.4758 |
 | recall p run5 |    0.4161 |
+
+## Reference
+Liu, X., Zambrano, A. F., Baker, R. S., Barany, A., Ocumpaugh, J., Zhang, J., Pankiewicz, M., Nasiar, N., & Wei, Z. (2025). Qualitative Coding with GPT-4: Where it Works Better. Journal of Learning Analytics, 12(1), 169-185. https://doi.org/10.18608/jla.2025.8575

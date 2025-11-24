@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 '''
-Dependencies:
-    pip install openai pandas numpy scikit-learn
-
 Usage: 
 export OPENAI_API_KEY="API_KEY"
 python paper_replicate_system_prompt.py \
