@@ -27,7 +27,28 @@ python paper_replicate_system_prompt.py \
 python table_convert.py run4/study3_zeroshot_per_construct_metrics_run4.json \ 
   --title "Construct Metrics Run1"
 ```
+### Step Instruction
+Step 1 - Data requirements
 
+Download the data from https://osf.io/pjk5t/files/osfstorage?view_only=17c6538775c94f1ba93596424af379e8. We’ll use the “Study 3 Raw Data.xlsx” file with the model and the “Study 3 Coded Data.csv” file for calculating the Kappa values.
+
+Step 2 - Run the experiment
+
+Use GPT-4 (if possible gpt-4-turbo-2024-04-09) model with default hyperparameters and temperature = 0. We’ll just replicate zero-shot results, because they didn’t exactly give the few-shot prompts, and in study 3 zero-shot approach outperformed the few-shot approach. So, use the prompt above to reproduce the zero-shot approach results.
+Send the prompt as a system message to the Chat Completions endpoint, followed by the specific line of data that GPT should code, send as a user message.
+
+Step 3 - Prepare the prompt payload
+
+System prompt: Include the construct name and its definition from the table above (see Table 8, codebook with definitions).
+User content: Pass only the line-level diff between two consecutive submissions (the raw data file is already in this format)
+
+Step 4 - Inference loop
+
+For each data row, iterate over the 14 constructs and call the model once per construct (System = zero-shot prompt with that construct’s definition; User = that row’s diff text). Collect a 0/1 for each construct. (Binary per-construct setup per paper.)
+
+Step 5 - Evaluation (IRR & metrics)
+
+Join predictions to Study 3 Coded Data.csv by the shared key (e.g., task_submit_id) and compute Cohen’s κ, precision, and recall (report per-construct and macro summaries). The paper computes and reports κ, precision, recall for Study 3 (see their Table 9/results). Because outputs can vary, the paper ran the coding three times and averaged κ/precision/recall across runs. But it is not necessary for us.
 ## Results
 
 ### Main Results
