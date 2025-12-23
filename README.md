@@ -37,7 +37,9 @@ python table_convert.py run4/study3_zeroshot_per_construct_metrics_run4.json \
 
 
 ## Results
-Δ is computed by *mean of runs - paper result*.
+Δ columns are computed as:  
+**Δ = mean (ours) − paper**
+
 ### Frequency 
 
 | construct | freq paper | freq run1 | freq run2 | mean freq | std freq | Δ freq |
