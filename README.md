@@ -2,11 +2,7 @@
 
 ## Overview
 
-### What was implemented
-
 This project partially reproduces **Study 3** of the paper *Qualitative Coding with GPT-4: Where it Works Better* by re-running the **zero-shot qualitative coding** pipeline. Using the authors’ released, de-identified raw code-change data and human-coded labels, the script prompts gpt-4-turbo-2024-04-09 to decide whether each code edit exhibits a specific qualitative construct (e.g., *If Header*, *Syntax Change*). The model’s binary predictions are then compared against the original human annotations using **Cohen’s kappa**.
-
-### Understand the findings
 
 Each execution evaluates **one construct at a time**, matching the experimental setup of Study 3. The primary output is the **human–model Cohen’s kappa** score. Higher kappa values indicate stronger agreement with human coders, while lower values highlight constructs that remain difficult for zero-shot LLMs. By comparing kappa scores across constructs or across different open-source models, we can quickly see which qualitative coding tasks transfer well to LLMs and which still pose challenges without additional examples or context.
 
