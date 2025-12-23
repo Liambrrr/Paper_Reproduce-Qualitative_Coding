@@ -37,6 +37,7 @@ python table_convert.py run4/study3_zeroshot_per_construct_metrics_run4.json \
 
 
 ## Results
+Δ is computed by *mean of runs - paper result*.
 ### Frequency 
 
 | construct | freq paper | freq run1 | freq run2 | mean freq | std freq | Δ freq |
@@ -119,6 +120,15 @@ python table_convert.py run4/study3_zeroshot_per_construct_metrics_run4.json \
 | variable usage and assignment | 0.85 | 0.64 | 0.77 | 0.71 | 0.09 | -0.14 |
 | variable-type change | 0.80 | 1.00 | 1.00 | 1.00 | 0.00 | +0.20 |
 | variable-type conversion | 0.96 | 1.00 | 0.92 | 0.96 | 0.06 | 0.00 |
+
+### Average Δ Across All Constructs
+
+| metric     | average Δ |
+|------------|-----------|
+| frequency  | +1.14     |
+| kappa      | -0.10     |
+| precision  | -0.09     |
+| recall     | +0.03     |
 
 ### Significance Tests (p-values)
 
